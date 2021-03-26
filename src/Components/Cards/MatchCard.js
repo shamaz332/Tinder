@@ -1,20 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TinderCard from "react-tinder-card";
+import firebaseDB from "../../Firebase/Api";
 import "./card.css";
 const MatchCard = () => {
-  const [people, serPeople] = useState([
-    {
-      name: "Shamaz",
-      url:
-        "https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg",
-    },
+  const [people, setPeople] = useState([]);
 
-    {
-      name: "usama",
-      url:
-        "https://image.shutterstock.com/image-photo/mountains-under-mist-morning-amazing-260nw-1725825019.jpg",
-    },
-  ]);
+  useEffect(() => {
+    firebaseDB
+      .collection("people")
+      .onSnapshot((snapshot) =>
+        setPeople(snapshot.docs.map((doc) => doc.data()))
+      );
+  }, []);
 
   return (
     <div>
