@@ -3,16 +3,23 @@ import { Header } from "./Components/Header/Header";
 import MatchCard from "./Components/Cards/MatchCard";
 import { Switch, Route } from "react-router-dom";
 import SwipeButton from "./Components/SwipeButton/SwipeButton";
+import ChatView from "./Components/Chat/ChatBox";
 function App() {
   return (
     <div className="App">
-      <Header />
       <Switch>
-        <Route path="/">
-          <MatchCard />
-          <SwipeButton/>
+
+      <Route path="/chat">
+          <Header backBtn="/" />
+         <ChatView/>
         </Route>
-        <Route path="/caht">Im chat</Route>
+
+        <Route path="/">
+          <Header />
+          <MatchCard />
+          <SwipeButton />
+        </Route>
+       
       </Switch>
     </div>
   );
