@@ -8,10 +8,9 @@ function App() {
   return (
     <div className="App">
       <Switch>
-
-      <Route path="/chat">
+        <Route path="/chat">
           <Header backBtn="/" />
-         <ChatView/>
+          <ChatView />
         </Route>
 
         <Route path="/">
@@ -19,7 +18,6 @@ function App() {
           <MatchCard />
           <SwipeButton />
         </Route>
-       
       </Switch>
     </div>
   );

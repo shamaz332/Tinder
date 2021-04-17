@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import TinderCard from "react-tinder-card";
-import firebaseDB from "../../Firebase/Api";
+import firebaseDB from "../../Firebase/Api.js";
 import "./card.css";
 const MatchCard = () => {
   const [people, setPeople] = useState([]);
