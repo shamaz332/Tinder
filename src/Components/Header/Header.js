@@ -23,7 +23,7 @@ export const Header = ({ backBtn }) => {
       <IconButton>
         <img
           className="header__logo"
-          src="https://cdn2.iconfinder.com/data/icons/social-media-icons-23/800/tinder-512.png"
+          src="https://cdn2.iconfinder.com/data/icons/social-media-icons-23/800/tinder-512.png" alt="icon"
         />{" "}
       </IconButton>
       <Link to="/chat">
